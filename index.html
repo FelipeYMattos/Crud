@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Pedidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Gerenciador de Pedidos</h1>
+    <form id="pedidoForm">
+      <input type="text" id="cliente" placeholder="Nome do Cliente" required>
+
+      <select id="tipo">
+        <option value="Low Carb">Low Carb</option>
+        <option value="Vegetariana">Vegetariana</option>
+        <option value="Tradicional">Tradicional</option>
+      </select>
+
+      <input type="number" id="quantidade" placeholder="Quantidade" min="1" required>
+
+      <label><input type="checkbox" value="Sem glúten" class="restricao"> Sem glúten</label>
+      <label><input type="checkbox" value="Sem lactose" class="restricao"> Sem lactose</label>
+
+      <button type="submit">Registrar Pedido</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th><th>Tipo</th><th>Qtd</th><th>Restrições</th><th>Valor</th><th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaPedidos"></tbody>
+    </table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
